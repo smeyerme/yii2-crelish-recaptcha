@@ -1,0 +1,27 @@
+{
+  "name": "giantbits/yii2-crelish-recaptcha",
+  "description": "Google reCAPTCHA v3 integration for Yii2 Crelish CMS",
+  "type": "yii2-extension",
+  "require": {
+    "yiisoft/yii2": "~2.0.0",
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "giantbits\\crelish\\recaptcha\\": "src/"
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Steffen Meyer",
+      "email": "myr.steffen@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "config": {
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true
+    }
+  }
+}
