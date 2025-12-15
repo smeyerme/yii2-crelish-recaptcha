@@ -215,18 +215,12 @@ class RecaptchaWidget extends InputWidget
                             submitBtn.innerHTML = originalText;
                         }
 
-                        // Trigger native submit or PJAX submit
-                        if (typeof jQuery !== 'undefined' && jQuery.pjax) {
-                            var pjaxContainer = form.closest('[data-pjax-container]') ||
-                                               form.closest('[data-pjax]')?.closest('[id]');
-                            if (pjaxContainer || form.dataset.pjax) {
-                                jQuery.pjax.submit(jQuery(form), '#' + (pjaxContainer?.id || 'pjax-container'));
-                                return;
-                            }
+                        // Trigger form submission via jQuery for PJAX compatibility
+                        if (typeof jQuery !== 'undefined') {
+                            jQuery(form).trigger('submit');
+                        } else {
+                            form.submit();
                         }
-
-                        // Regular submit
-                        form.submit();
                     })
                     .catch(function(err) {
                         console.error('reCAPTCHA error:', err);
