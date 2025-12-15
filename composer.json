@@ -1,8 +1,31 @@
 {
   "name": "giantbits/yii2-crelish-recaptcha",
-  "description": "Google reCAPTCHA v3 integration for Yii2 Crelish CMS",
+  "description": "Google reCAPTCHA v3 integration for Yii2 with automatic token refresh. Works seamlessly with AJAX/PJAX forms.",
   "type": "yii2-extension",
+  "keywords": [
+    "yii2",
+    "recaptcha",
+    "recaptcha-v3",
+    "google-recaptcha",
+    "spam-protection",
+    "form-validation",
+    "crelish"
+  ],
+  "homepage": "https://github.com/giantbits/yii2-crelish-recaptcha",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Steffen Meyer",
+      "email": "myr.steffen@gmail.com",
+      "homepage": "https://giantbits.ch"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/giantbits/yii2-crelish-recaptcha/issues",
+    "source": "https://github.com/giantbits/yii2-crelish-recaptcha"
+  },
   "require": {
+    "php": ">=7.4",
     "yiisoft/yii2": "~2.0.0",
     "guzzlehttp/guzzle": "^7.0"
   },
@@ -11,15 +34,13 @@
       "giantbits\\crelish\\recaptcha\\": "src/"
     }
   },
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Steffen Meyer",
-      "email": "myr.steffen@gmail.com"
+  "extra": {
+    "branch-alias": {
+      "dev-main": "1.0.x-dev"
     }
-  ],
-  "minimum-stability": "dev",
+  },
   "config": {
+    "sort-packages": true,
     "allow-plugins": {
       "yiisoft/yii2-composer": true
     }
